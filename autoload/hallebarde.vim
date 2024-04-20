@@ -142,7 +142,7 @@ function! hallebarde#run(...) abort
                 call fzf#run({
                     \  "source":  l:list,
                     \  "sink*":   function("s:hallbarde_sink"),
-                    \  "options": "-x --expect=ctrl-e --bind backward-eof:abort --bind change:top",
+                    \  "options": "--preview \"bat --color=always --style=numbers --line-range=:200 {}\" -x --expect=ctrl-e --bind backward-eof:abort --bind change:top",
                     \  "window":  g:hallebarde_window_options
                     \ } )
             endif
